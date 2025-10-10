@@ -120,7 +120,7 @@ body {
     border: none;
     padding: 1em;
     border-radius: 10px;
-    margin: 0;
+    margin: 0.05em;
     font-size: 1em;
     cursor: pointer;
     transition: background 0.3s;
@@ -153,13 +153,15 @@ body {
     display: block;
   }
 
-  /* ensure sections are hidden by default and shown when .active */
-  main section { display: none; }
+  /* ensure sections are hidden by default and shown when .active
+  main section { 
+    display: none; 
+  }
   main section.active { display: block !important; }
-
-  /* let :target also show a section (nice when someone links to #experiences) */
-  main section:target { display: block; }
   
+  /* let :target also show a section (nice when someone links to #experiences) */
+  /* main section:target { display: block; } */
+
   ul {
     list-style: square inside;
   }

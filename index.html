@@ -41,7 +41,8 @@
     <button class="tab-link" data-tab="contact">Contact</button>
   </nav>
 
-  <main>
+  <main id="main-content">
+    <!-- About -->
     <section id="about">
       <h2>About</h2>
       <p>
@@ -57,8 +58,8 @@
         The primary goal is to improve planning approaches, whilst making the planning process safer and more 
         interpretable to users, and by doing so, increasing people's trust in the system. -->
       </p>
-    </section>
-
+  </section>
+    <!-- Research -->
     <section id="research">
       <h2>Research Interests</h2>
       <ul>
@@ -67,8 +68,8 @@
         <li>Robotics</li>
         <li>Large Language Models</li>
       </ul>
-    </section>
-
+  </section>  
+    <!-- Publications -->
     <section id="publications">
       <h2>Publications</h2>
       <details>
@@ -80,78 +81,43 @@
       <p>
         A full list is available on <a href="https://scholar.google.co.uk/citations?user=kpAdeYIAAAAJ&hl=en" target="_blank">Google Scholar</a>.
       </p>
-    </section>
-
+  </section>
+    <!-- CV -->
     <section id="cv">
       <h2>Curriculum Vitae</h2>
       <p>
         <a href="content/CV_Maayan_Armony_20251010.pdf" target="_blank">Download my CV (PDF)</a>
       </p>
     </section>
-
+    <!-- experiences -->
     <section id="experiences">
       <h2>Experiences & Outreach</h2>
       <p>
-        Below are highlights from demos, outreach events, and public engagement activities related to my research.
-        You can find more posts on <a href="https://twitter.com/anonymous" target="_blank">Twitter</a> and 
-        <a href="https://linkedin.com/in/anonymous" target="_blank">LinkedIn</a>.
+        TBC!
       </p>
-      <div class="gallery">
+      <!-- <div class="gallery">
         <img src="content/demo1.jpg" alt="Demo photo 1">
         <img src="content/outreach2.jpg" alt="Outreach photo 2">
         <img src="content/lab3.jpg" alt="Lab demo photo 3">
-      </div>
+      </div> -->
     </section>
-
+    <!-- contact -->
     <section id="contact">
       <h2>Contact</h2>
       <p>
-        <a href="mailto:maayan.armony@kcl.ac.uk">Email</a><br>
-        <a href="https://www.linkedin.com/in/maayan-linda-reshef-armony/" target="_blank">LinkedIn</a><br>
-        <a href="https://orcid.org/0009-0007-5742-4452" target="_blank">ORCID</a><br>
-        <a href="https://safeandtrustedai.org/person/maayan-armony/" target="_blank">Safe and Trusted AI Profile</a>
+          <a href="mailto:maayan.armony@kcl.ac.uk">Email</a><br>
+          <a href="https://www.linkedin.com/in/maayan-linda-reshef-armony/" target="_blank">LinkedIn</a><br>
+          <a href="https://orcid.org/0009-0007-5742-4452" target="_blank">ORCID</a><br>
+          <a href="https://safeandtrustedai.org/person/maayan-armony/" target="_blank">Safe and Trusted AI Profile</a>
       </p>
-    </section>
+  </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Ma'ayan Armony. All rights reserved.</p>
   </footer>
-<script>
-  (function() {
-    const tabLinks = document.querySelectorAll('.tab-link');
-    const sections = document.querySelectorAll('main section');
-  
-    function showTab(tabName) {
-      tabLinks.forEach(b => b.classList.remove('active'));
-      sections.forEach(s => s.classList.remove('active'));
-  
-      const btn = document.querySelector(`[data-tab="${tabName}"]`);
-      const sec = document.getElementById(tabName);
-      if (btn && sec) {
-        btn.classList.add('active');
-        sec.classList.add('active');
-      }
-  
-      // update URL hash (optional)
-      history.replaceState(null, '', `#${tabName}`);
-    }
-  
-    tabLinks.forEach(button => {
-      button.addEventListener('click', () => {
-        showTab(button.dataset.tab);
-        // 👇 new line: reset scroll
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    });
-  
-    // default tab or hash
-    window.addEventListener('DOMContentLoaded', () => {
-      const hash = window.location.hash.replace('#', '');
-      const initial = (hash && document.getElementById(hash)) ? hash : 'about';
-      showTab(initial);
-    });
-  })();
-  </script>
+  <script src="js/tabs.js"></script>
   </body>
 </html>
+
+
