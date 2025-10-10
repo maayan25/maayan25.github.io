@@ -1,0 +1,183 @@
+/* Basic styling for a clean academic look */
+
+body {
+    font-family: 'Inter', sans-serif;
+    max-width: 1000px;
+    margin: 2em auto;
+    padding: 0 1em;
+    line-height: 1.6;
+    color: #2c0606;
+    background-color: #ddcaca;
+  }
+
+  /* HREF colour modification */
+  a {
+    color: #510818;      
+    text-decoration: underline; /* Removes underline */
+  }
+  
+  a:visited {
+    color: #510818;        /* Same as unvisited */
+  }
+  
+  a:hover,
+  a:focus {
+    color: #2a040c;        /* Slightly darker for hover */
+    text-decoration: underline; /* Optional hover effect */
+  }
+  
+  a:active {
+    color: #000000;        /* Even darker when clicked */
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 3em;
+    padding-top: 1em;
+    border-top: 1px solid #ddd;
+    color: #715656;
+    font-size: 0.9em;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1em;
+  }
+  .gallery img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+  
+  h1 {
+    margin: 0.2em 0;
+    font-size: 2em;
+  }
+
+  h2 {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0.3em;
+    margin-top: 1.5em;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 1em;
+    padding: 2em 1em 1em;
+    border-radius: 10px;
+    background: #2a040c;
+    color: #f6dfdf;
+  }
+  
+  header h1 {
+    margin-bottom: 0em;
+    font-size: 1.8em;
+  }
+  
+  header p {
+    color: #f6dfdf;
+    font-style: capitalize;
+  }
+
+  header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 0.8em;
+    border: 2px solid #fff;
+  }
+
+  /* Scrolling between sections */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html, body {
+    /* width: 100%; */
+    overflow-x: hidden;
+    zoom: 100%;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 0 1em;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #ddcaca;
+    border-bottom: 1px solid #ddcaca;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+  nav button {
+    background: none;
+    border: none;
+    padding: 1em;
+    border-radius: 10px;
+    margin: 0;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  nav button:hover, nav button.active {
+    background: #2a040c;
+    color: #fff;
+  }
+  
+  nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #510818;
+    font-weight: 700;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  section {
+    display: none;
+    background: #e7d7d7;
+    border-radius: 10px;
+    padding: 1.5em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    animation: fadeIn 0.4s ease-in;
+  }
+  section.active {
+    display: block;
+  }
+
+  /* ensure sections are hidden by default and shown when .active */
+  main section { display: none; }
+  main section.active { display: block !important; }
+
+  /* let :target also show a section (nice when someone links to #experiences) */
+  main section:target { display: block; }
+  
+  ul {
+    list-style: square inside;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Responsive for mobile */
+  @media (max-width: 600px) {
+    body {
+      padding: 1em;
+    }
+    .profile {
+      float: none;
+      display: block;
+      margin: 0 auto 1em;
+    }
+  }
+  

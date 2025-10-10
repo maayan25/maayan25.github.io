@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Maayan Armony is a PhD Student at King's College London, working on integration of common-sense into AI planning, using knowledge graphs and LLMs.">
+  <meta name="keywords" content="Maayan Armony, Ma'ayan Armony, AI, Planning, Robotics, Knowledge Graphs, common-sense reasoning, Publications, CV">
+  <meta name="author" content="Maayan Armony" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Website Maayan Armony</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta name="theme-color" content="#2a040c">
+  <link rel="canonical" href="https://maayan25.github.io/">
+
+  <meta property="og:title" content="Ma'ayan Armony | Personal Website">
+  <meta property="og:description" content="Maayan Armony is a PhD Student at King's College London, working on integration of common-sense into AI planning, using knowledge graphs and LLMs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://maayan25.github.io/">
+  <meta property="og:image" content="https://maayan25.github.io/content/profile.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ma'ayan Armony | Personal Website">
+  <meta name="twitter:description" content="PhD Student in AI Planning and Knowledge Representation.">
+  <meta name="twitter:image" content="https://maayan25.github.io/content/profile.jpg">
+</head>
+
+<body>
+  <header>
+    <img src="content/profile.jpg" alt="Profile Photo">
+    <h1>Maayan Armony</h1>
+    <p>PhD Student | Department of Informatics | King's College London</p>
+  </header>
+
+  <nav>
+    <button class="tab-link active" data-tab="about">About</button>
+    <button class="tab-link" data-tab="research">Research</button>
+    <button class="tab-link" data-tab="publications">Publications</button>
+    <button class="tab-link" data-tab="cv">CV</button>
+    <button class="tab-link" data-tab="experiences">Experiences</button>
+    <button class="tab-link" data-tab="contact">Contact</button>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am a 2nd year fully-funded PhD student in the Department of Informatics at King's College London, 
+        supervised by <a href="https://gerardcanal.github.io/" target="_blank">Dr Gerard Canal</a> and <a href="https://www.albertmeronyo.org/" target="_blank">Dr Albert Meroño Peñuela</a>, 
+        and aligned with the UKRI Safe and Trusted AI Centre for Doctoral Training.
+      </p><p>
+        My research focuses on leveraging common-sense knowledge for the process of robot task planning. 
+        More specifically, it aims to improve the safety and trustworthiness of plans (sequences of actions) 
+        that are generated for a robot to execute, and be able to reach a desired goal in a given environment.
+        <!-- This is to be done using structured knowledge bases (knowledge graphs), by incorporating knowledge 
+        which is intuitive to humans into the decision-making process during plan generation. 
+        The primary goal is to improve planning approaches, whilst making the planning process safer and more 
+        interpretable to users, and by doing so, increasing people's trust in the system. -->
+      </p>
+    </section>
+
+    <section id="research">
+      <h2>Research Interests</h2>
+      <ul>
+        <li>AI Planning</li>
+        <li>Knowledge Graphs</li>
+        <li>Robotics</li>
+        <li>Large Language Models</li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <details>
+        <summary>2025</summary>
+        <ul>
+          <li><a href="https://kclpure.kcl.ac.uk/ws/portalfiles/portal/328891240/mousavi-forte-lolaprompts-2025.pdf" target="_blank">LolaPrompts: Assisting the General Public in Performing Real-Driving Emission Tests</a></li>
+        </ul>
+      </details>      
+      <p>
+        A full list is available on <a href="https://scholar.google.co.uk/citations?user=kpAdeYIAAAAJ&hl=en" target="_blank">Google Scholar</a>.
+      </p>
+    </section>
+
+    <section id="cv">
+      <h2>Curriculum Vitae</h2>
+      <p>
+        <a href="content/CV_Maayan_Armony_20251010.pdf" target="_blank">Download my CV (PDF)</a>
+      </p>
+    </section>
+
+    <section id="experiences">
+      <h2>Experiences & Outreach</h2>
+      <p>
+        Below are highlights from demos, outreach events, and public engagement activities related to my research.
+        You can find more posts on <a href="https://twitter.com/anonymous" target="_blank">Twitter</a> and 
+        <a href="https://linkedin.com/in/anonymous" target="_blank">LinkedIn</a>.
+      </p>
+      <div class="gallery">
+        <img src="content/demo1.jpg" alt="Demo photo 1">
+        <img src="content/outreach2.jpg" alt="Outreach photo 2">
+        <img src="content/lab3.jpg" alt="Lab demo photo 3">
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        <a href="mailto:maayan.armony@kcl.ac.uk">Email</a><br>
+        <a href="https://www.linkedin.com/in/maayan-linda-reshef-armony/" target="_blank">LinkedIn</a><br>
+        <a href="https://orcid.org/0009-0007-5742-4452" target="_blank">ORCID</a><br>
+        <a href="https://safeandtrustedai.org/person/maayan-armony/" target="_blank">Safe and Trusted AI Profile</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ma'ayan Armony. All rights reserved.</p>
+  </footer>
+<script>
+  (function() {
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const sections = document.querySelectorAll('main section');
+  
+    function showTab(tabName) {
+      tabLinks.forEach(b => b.classList.remove('active'));
+      sections.forEach(s => s.classList.remove('active'));
+  
+      const btn = document.querySelector(`[data-tab="${tabName}"]`);
+      const sec = document.getElementById(tabName);
+      if (btn && sec) {
+        btn.classList.add('active');
+        sec.classList.add('active');
+      }
+  
+      // update URL hash (optional)
+      history.replaceState(null, '', `#${tabName}`);
+    }
+  
+    tabLinks.forEach(button => {
+      button.addEventListener('click', () => {
+        showTab(button.dataset.tab);
+        // 👇 new line: reset scroll
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  
+    // default tab or hash
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash.replace('#', '');
+      const initial = (hash && document.getElementById(hash)) ? hash : 'about';
+      showTab(initial);
+    });
+  })();
+  </script>
+  </body>
+</html>
