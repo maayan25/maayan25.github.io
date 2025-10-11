@@ -142,25 +142,16 @@ body {
   }
 
   section {
-    display: none;
+    /* display: none; */
     background: #e7d7d7;
     border-radius: 10px;
     padding: 1.5em;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     animation: fadeIn 0.4s ease-in;
   }
-  section.active {
+  /* section.active {
     display: block;
-  }
-
-  /* ensure sections are hidden by default and shown when .active
-  main section { 
-    display: none; 
-  }
-  main section.active { display: block !important; }
-  
-  /* let :target also show a section (nice when someone links to #experiences) */
-  /* main section:target { display: block; } */
+  } */
 
   ul {
     list-style: square inside;

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Load Test</title>
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+</head>
+<body>
+  <header>
+    <img src="content/profile.jpg" alt="Profile Photo">
+    <h1>Maayan Armony</h1>
+    <p>PhD Student | Department of Informatics | King's College London</p>
+  </header>
+  <nav>
+    <button data-tab="about" class="tab-link">About</button>
+    <button data-tab="research" class="tab-link">Research</button>
+    <button class="tab-link" data-tab="publications">Publications</button>
+    <button class="tab-link" data-tab="cv">CV</button>
+    <button class="tab-link" data-tab="experiences">Experiences</button>
+    <button class="tab-link" data-tab="contact">Contact</button>
+  </nav>
+
+  <main id="main-content">
+    <p>Default content area. Tabs will replace this.</p>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll(".tab-link");
+      const main = document.getElementById("main-content");
+
+      async function loadTab(tab) {
+        console.log("Loading", tab);
+        try {
+          const res = await fetch(`sections/${tab}.html`);
+          if (!res.ok) throw new Error(`${tab}.html not found`);
+          const text = await res.text();
+          main.innerHTML = text;
+        } catch (e) {
+          main.innerHTML = `<p style="color:red">${e}</p>`;
+        }
+      }
+
+      buttons.forEach(b => b.addEventListener("click", () => loadTab(b.dataset.tab)));
+      // load default
+      loadTab("about");
+    });
+  </script>
+</body>
+</html>
