@@ -17,7 +17,23 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (err) {
       main.innerHTML = `<p style="color:red">${err.message}</p>`;
     }
+    // Re-initialize Twitter embeds if they exist
+    if (window.twttr && window.twttr.widgets) {
+      window.twttr.widgets.load();
+}
   }
+  // async function loadTab(tab, pushState = true) {
+  //   const res = await fetch(`sections/${tab}.html`);
+  //   const text = await res.text();
+  //   main.innerHTML = `<div class="tab-content">${text}</div>`;
+  //   buttons.forEach(btn => btn.classList.toggle("active", btn.dataset.tab === tab));
+  //   if (pushState) history.pushState({ tab }, "", `#${tab}`);
+  
+  //   // Re-initialize Twitter embeds if needed
+  //   if (window.twttr && window.twttr.widgets) {
+  //     window.twttr.widgets.load();
+  //   }
+  // }
 
   // Button click handler
   buttons.forEach(b => b.addEventListener("click", () => loadTab(b.dataset.tab)));
