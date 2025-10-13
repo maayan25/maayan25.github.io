@@ -33,11 +33,47 @@ body {
   footer {
     text-align: center;
     margin-top: 3em;
-    padding-top: 1em;
-    border-top: 1px solid #ddd;
+    padding: 1.5em 0 0.5em;
+    border-top: 1px solid #cbb;
     color: #715656;
-    font-size: 0.9em;
+    font-size: 0.85em;
+    background: #ddcaca;
   }
+  
+  .footer-contacts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-bottom: 0.8em;
+  }
+  
+  .footer-contacts a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: #e7d7d7;
+    border-radius: 50%;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .footer-contacts a:hover {
+    background: #2a040c;
+    transform: translateY(-2px);
+  }
+  
+  .footer-contacts img {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) saturate(100%) invert(12%) sepia(8%) saturate(3453%) hue-rotate(332deg) brightness(96%) contrast(92%);
+    transition: filter 0.3s;
+  }
+  
+  .footer-contacts a:hover img {
+    filter: brightness(0) invert(1);
+  }  
 
   .gallery {
     display: grid;
@@ -269,3 +305,47 @@ body {
     overflow: auto;
     margin: 0 auto !important;
   }
+
+  /* For Contact tab
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1em;
+    margin-top: 1.5em;
+  }
+  
+  .contact-card {
+    background: #e7d7d7;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    color: #2a040c;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.3s;
+  }
+  
+  .contact-card:hover {
+    background: #2a040c;
+    color: #fff;
+    transform: translateY(-3px);
+  }
+  
+  .contact-card img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 0.5em;
+    filter: brightness(0) saturate(100%) invert(12%) sepia(8%) saturate(3453%) hue-rotate(332deg) brightness(96%) contrast(92%);
+    transition: filter 0.3s;
+  }
+  
+  .contact-card:hover img {
+    filter: brightness(0) invert(1);
+  }
+  
+  .contact-card span {
+    display: block;
+    font-size: 0.95em;
+    font-weight: 600;
+  } */
+  
