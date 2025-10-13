@@ -306,6 +306,102 @@ body {
     margin: 0 auto !important;
   }
 
+  /* For Research tab */
+  .research {
+    background: #e7d7d7;
+    border-radius: 10px;
+    padding: 1.5em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  .interests-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    margin: 1em 0 2.5em;
+  }
+  
+  .interest-item {
+    background: #e7d7d7;
+    border-radius: 10px;
+    padding: 1em 1.2em;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .interest-item:hover {
+    transform: translateY(0px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  
+  .interest-item h3 {
+    margin: 0 0 0.3em;
+    color: #2a040c;
+    font-size: 1.1em;
+  }
+  
+  .interest-item p {
+    margin: 0;
+    color: #4a3c3c;
+    font-size: 0.95em;
+    line-height: 1.5;
+  }
+  
+  .pubs {
+    margin-top: 2em;
+  }
+  
+  .pub {
+    background: #f3e8e8;
+    border-radius: 10px;
+    padding: 1em 1.2em;
+    margin-bottom: 1em;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+
+  .pub:hover {
+    transform: translateY(0px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  
+  .pub-title {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  
+  .pub-details {
+    font-size: 0.9em;
+    color: #715656;
+    margin: 0.4em 0 0.8em;
+  }
+  
+  .pub-links a {
+    background: #2a040c;
+    color: #fff;
+    padding: 0.4em 0.8em;
+    margin-right: 0.5em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background 0.3s;
+  }
+  
+  .pub-links a:hover {
+    background: #510818;
+  }
+  
+  .year-divider h3 {
+    margin-top: 1em;
+    color: #2a040c;
+    font-weight: 700;
+  }
+  
+  .more {
+    margin-top: 1.5em;
+    text-align: center;
+  }
+  
   /* For Contact tab
   .contact-grid {
     display: grid;
